@@ -12,6 +12,7 @@ Source0:	http://search.cpan.org/CPAN/authors/id/D/DA/DAGOLDEN/%{modname}-%{modve
 BuildArch:	noarch
 BuildRequires:	perl(Test)
 BuildRequires:	perl(Test::More)
+BuildRequires:	perl(open)
 BuildRequires:	perl-devel
 
 %description
