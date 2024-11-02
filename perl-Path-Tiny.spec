@@ -1,14 +1,13 @@
 %define modname	Path-Tiny
-%define modver 0.104
 
 Summary:	Perl file path utility
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	2
+Version:	0.146
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://search.cpan.org/CPAN/authors/id/D/DA/DAGOLDEN/%{modname}-%{modver}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/D/DA/DAGOLDEN/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test)
 BuildRequires:	perl(Test::More)
@@ -19,14 +18,14 @@ BuildRequires:	perl-devel
 Perl file path utility
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
-%make test
+%make_build test
 
 %install
 %make_install
