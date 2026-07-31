@@ -2,7 +2,7 @@
 
 Summary:	Perl file path utility
 Name:		perl-%{modname}
-Version:	0.146
+Version:	0.150
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
@@ -19,7 +19,7 @@ BuildRequires:	perl-devel
 Perl file path utility
 
 %prep
-%autosetup -p1 -n %{modname}-%{version}
+%autosetup -p1 -n Path-Tiny-0.150
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
